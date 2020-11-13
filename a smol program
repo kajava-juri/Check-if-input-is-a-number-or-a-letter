@@ -1,11 +1,18 @@
 validation = False
+#both n1 and n2 are automatically converted into strings
+#so if you try to convert a string number into integer it will succed, but not with string letter
 n1 = input("Enter first number(n1): ")
 n2 = input("Enter second number((n2): ")
 while not validation:
+#trie to convert n1 to integer
     try:
         n1 = int(n1)
+#if it fails, user will be asked to input it again
     except ValueError:
         n1 = input("This is not a number(n1), please enter first number: ")
+#same as the first try:
+#but it also checks if n1 was succeededly converted, if not, it continues
+#if both are numbers it exits the loop
     try:
         n2 = int(n2)
         if n1 == str(n1):
