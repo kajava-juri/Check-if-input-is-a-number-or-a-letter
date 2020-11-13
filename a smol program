@@ -1,0 +1,16 @@
+validation = False
+n1 = input("Enter first number(n1): ")
+n2 = input("Enter second number((n2): ")
+while not validation:
+    try:
+        n1 = int(n1)
+    except ValueError:
+        n1 = input("This is not a number(n1), please enter first number: ")
+    try:
+        n2 = int(n2)
+        if n1 == str(n1):
+            continue
+        validation = True
+    except ValueError:
+        n2 = input("This is not a number(n2), please enter second number: ")
+print("n1 and n2 are numbers!")
